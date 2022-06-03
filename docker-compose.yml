@@ -14,10 +14,10 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      - POSTGRES_PASSWORD=teamcity_password
-      - POSTGRES_USER=teamcity_user
-      - POSTGRES_DB=teamcity_db
-      - PG_DATA=/var/lib/postgresql/data
+      - POSTGRES_PASSWORD
+      - POSTGRES_USER
+      - POSTGRES_DB
+      - PG_DATA
     volumes:
       - ./buildserver_pgdata:/var/lib/postgresql/data
         #ports:
@@ -25,8 +25,17 @@ services:
 
   teamcity:
     image: jetbrains/teamcity-server:${TEAMCITY_VERSION}
+    command: >
+      bash -c 'sed -i -e "s#passToChange#${POSTGRES_PASSWORD}#g" /data/teamcity_server/datadir/config/database.properties 
+      && sed -i -e "s#userToChange#${POSTGRES_USER}#g" /data/teamcity_server/datadir/config/database.properties 
+      && ./run-services.sh'
+    #build: ./Dockerfile
     ports:
       - "8112:8111"
+    environment:
+      - POSTGRES_PASSWORD
+      - POSTGRES_USER
+      - POSTGRES_DB
     volumes:
       - ./data_dir:/data/teamcity_server/datadir
       - ./teamcity-server-logs:/opt/teamcity/logs
