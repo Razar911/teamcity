@@ -18,4 +18,5 @@ docker-compose up -d
 
 `http://localhost:8112` or `http://{YOUR_SERVER_IP}:8112`
 
+<br>
 After creating a user, visit ["Agents -> Unauthorized"] to authorize the build agent.
