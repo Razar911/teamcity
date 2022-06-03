@@ -7,6 +7,13 @@ git clone https://github.com/Razar911/teamcity.git
 
 Set TeamCity version, database user and password in `.env` file
 
+Some folders:
+* ./buildserver_pgdata - Posgres DB data
+* ./data_dir - TeamCity data directory
+* ./teamcity-server-logs - logs of primary TeamCity server
+* ./agents/agent-1/conf - configuration directory for the first build agent
+* ./agents/agent-min/conf - configuration directory for the minimal build agent
+
 ##### Run docker-compose:
 ```
 cd teamcity/
