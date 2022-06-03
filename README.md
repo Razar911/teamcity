@@ -1,8 +1,21 @@
 # Teamcity server
-##### Download code to your server:<br>
-`git clone https://github.com/Razar911/teamcity.git`
-##### Run docker-compose:<br>
-`cd teamcity/`<br>
-`docker-compose up -d`
-##### After start all containers, Teamcity server will be able at:<br>
+##### Download code to your server:
+
+```
+git clone https://github.com/Razar911/teamcity.git
+```
+
+Set TeamCity version in `.env` file
+
+##### Run docker-compose:
+```
+cd teamcity/
+
+docker-compose up -d
+```
+
+##### After start all containers, Teamcity server will be able at:
+
 `http://localhost:8112` or `http://{YOUR_SERVER_IP}:8112`
+
+After creating a user, visit ["Agents -> Unauthorized"] to authorize the build agent.
