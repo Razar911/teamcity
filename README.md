@@ -29,6 +29,6 @@ I create CI for my test project `https://github.com/Razar911/flatris_test`
 
 I setup two steps:
 * build image from [Dockerfile](https://github.com/Razar911/flatris_test/blob/0a065640107ebb4e82c73e5b3f23d2890c723a39/Dockerfile)
-* push image to my [Dockerhub](https://hub.docker.com/repository/docker/dockerbarabash/flatris-test/general)
+* push image to my [Dockerhub](https://hub.docker.com/repository/docker/dockerbarabash/flatris-test/general), tag `latest`
 
 As a bonus, I added third step - Run App on Server. Application able at [http://94.130.17.105:3000/](http://94.130.17.105:3000/)
