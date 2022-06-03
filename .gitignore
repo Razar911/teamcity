@@ -1,2 +1,2 @@
-./data_dir
-./teamcity-server-logs
+data_dir/
+teamcity-server-logs/
