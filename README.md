@@ -5,7 +5,7 @@
 git clone https://github.com/Razar911/teamcity.git
 ```
 
-Set TeamCity version in `.env` file
+Set TeamCity version, database user and password in `.env` file
 
 ##### Run docker-compose:
 ```
